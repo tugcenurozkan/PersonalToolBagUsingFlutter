@@ -40,7 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
   void initState() {
     super.initState();
     Timer(
-        Duration(seconds: 4), //4 olarak değiş
+        Duration(seconds: 4),
         () => Navigator.pushReplacement(
             context, MaterialPageRoute(builder: (context) => SecondScreen())));
   }
@@ -87,54 +87,6 @@ class SecondScreen extends StatelessWidget {
                 }),
           ],
         ),
-      ),
-    );
-  }
-}
-
-class OtherScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text("Happp")),
-      body: Column(
-        children: [
-          FlatButton(
-            child: Text('Pop!'),
-            onPressed: () {
-              Navigator.pop(context);
-            },
-          ),
-          Center(
-              child: Text(
-            "Welcome baby",
-            textScaleFactor: 2,
-          )),
-        ],
-      ),
-    );
-  }
-}
-
-class Other2Screen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text("Happp")),
-      body: Column(
-        children: [
-          FlatButton(
-            child: Text('Pop!'),
-            onPressed: () {
-              Navigator.pop(context);
-            },
-          ),
-          Center(
-              child: Text(
-            "Other2 screen",
-            textScaleFactor: 2,
-          )),
-        ],
       ),
     );
   }
